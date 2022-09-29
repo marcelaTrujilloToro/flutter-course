@@ -18,4 +18,6 @@ void main(List<String> args) {
   dory.swim();
   lazy.jump();
   lazy.run();
+  lazy.run();
+
 }
