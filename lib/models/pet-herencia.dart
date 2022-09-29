@@ -1,4 +1,5 @@
-class Pet {
+//asi no es posible crear una instacia de la clase pet
+abstract class Pet {
   final String name;
   final int age;
 
@@ -11,6 +12,9 @@ class Pet {
   String toString() {
     return "name: $name, age: $age";
   }
+
+// al ser una funcion sin cuerpo en las clases hijas se debe sobreescribir
+  void sleep();
 }
 
 class Dog extends Pet {
@@ -33,10 +37,15 @@ class Dog extends Pet {
   void jump() {
     print("Jumpping");
   }
+
+
+  @override
+  void sleep() {
+    print("Sleep dog");
+  }
 }
 
 class Fish extends Pet {
-
   final int fins;
   Fish({
     required String name,
@@ -52,8 +61,14 @@ class Fish extends Pet {
     print("Swimming");
   }
 
+//sobreescribir el metodo sleep del padre
+  @override
+  void sleep() {
+    print("Sleep fish");
+  }
+
 //usando metodos de la clase padre
-  @override 
+  @override
   String toString() {
     return "${super.toString()}, fins: $fins";
   }
