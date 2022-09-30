@@ -28,9 +28,8 @@ class FlyingFish extends Fish with FlyMixin, SwimMixin{}
 
 // on para decirle en qeu tipo de clases se puede usar 
 mixin SwimMixin on Animal{
-  void swim(){
-    print("$runtimeType swim");
-  }
+  //lambda funcion
+  void swim()=> print("$runtimeType swim");
 }
 
 mixin WalkMixin on Animal{
