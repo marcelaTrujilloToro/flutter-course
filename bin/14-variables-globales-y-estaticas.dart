@@ -17,7 +17,6 @@ void main(List<String> args) {
   for (final s in Status.values) {
     print(s);
     print(s.index);
-    print(s.name);
   }
 final orderStatus = Status.created;
 
